@@ -5,7 +5,6 @@
     <ul>
         @foreach ($roles as $role)
             <li>{{ $role->name }}</li>
-            <!-- Add buttons or links for edit and delete -->
              <div class="btn-group">
                         <a href="{{ route('roles.edit', $role) }}" class="btn btn-sm btn-outline-secondary">Edit</a>
                         <form action="{{ route('roles.destroy', $role) }}" method="POST">

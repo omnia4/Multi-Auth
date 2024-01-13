@@ -17,7 +17,6 @@ class IsAdmin
     public function handle(Request $request, Closure $next)
     {
         if (!Auth::check() || !Auth::user()->isAdmin()) {
-            // Redirect or handle the response if the user is not an admin
             return redirect('/')->with('error', 'You do not have admin access.');
         }
 
